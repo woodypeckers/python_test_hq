@@ -1,0 +1,7 @@
+1500299747431	geckodriver	INFO	Listening on 127.0.0.1:52128
+1500299749510	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args ["-marionette"]
+1500299754536	Marionette	INFO	Listening on port 52135
+1500299754936	Marionette	WARN	TLS certificate errors will be ignored for this session
+1500299763505	Marionette	INFO	New connections will no longer be accepted
+[Child 4392] ###!!! ABORT: Aborting on channel error.: file c:/builds/moz2_slave/m-esr52-w32-000000000000000000/build/src/ipc/glue/MessageChannel.cpp, line 2152
+
