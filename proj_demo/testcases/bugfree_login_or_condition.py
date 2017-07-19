@@ -9,7 +9,7 @@ import time,os
 from selenium.webdriver.support.ui import Select
 import random
 from config import *
-from bussiness_common_steps import  *
+from testcases.bussiness_common_steps import *
 
 
 class BugFreeLoginOrCondition(unittest.TestCase):

@@ -3,12 +3,11 @@
 
 #__auth__=='__hq__'
 import unittest
-import time
+import time,os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import Select
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 from config import *
 from testcases.bussiness_common_steps import  *
@@ -26,6 +25,15 @@ class ProductAdd(unittest.TestCase):
     def test_product001(self):
         """添加产品"""
         driver = self.driver
+        driver.find_element_by_link_text(u"导入").click()
+        driver.find_element_by_id("casefilename").click()
+        time.sleep(2)
+        cur_dir = ("F:/gihub_case/proj_demo/tools")
+        print cur_dir
+        os.system("%s/upload_file_x64.exe" % cur_dir)
+        driver.find_element_by_id("uploadbutton").click()
+        driver.switch_to.alert.dismiss()
+        time.sleep(2)
         driver.find_element_by_link_text(u"后台管理").click()
         time.sleep(2)
         driver.switch_to.window(driver.window_handles[1])

@@ -2,6 +2,10 @@
 #encoding:utf-8
 #__auth__=='__hq__'
 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import Select
 import time
 
 def open_url(driver,url):
@@ -18,6 +22,15 @@ def click_element_by_id_with_sleep(driver,id,sleep=2):
     #判断元素是否存在
     try:
         driver.find_element_by_id(id).click()
+    except:
+        pass
+    finally:
+        time.sleep(2)
+
+def click_element_by_xpath_with_sleep(driver,xpath,sleep=2):
+    #判断元素是否存在
+    try:
+        driver.find_element_by_xpath(xpath).click()
     except:
         pass
     finally:
